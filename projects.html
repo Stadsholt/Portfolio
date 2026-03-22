@@ -104,8 +104,13 @@
 		<section class="spotlights" id="two">
 			<!-- Bootstrap Carousel -->
 			<section>
-
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+					</ol>
+
 					<div class="carousel-inner">
 						<div class="carousel-item active">
 							<img src="images/moesgaard1.jpg" class="d-block w-100" alt="Moesgaard Image 1">
@@ -114,6 +119,8 @@
 							<img src="images/moesgaard2.jpg" class="d-block w-100" alt="Moesgaard Image 2">
 						</div>
 					</div>
+
+					<!-- Controls -->
 					<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="sr-only">Previous</span>
@@ -123,6 +130,7 @@
 						<span class="sr-only">Next</span>
 					</a>
 				</div>
+
 				<div class="content">
 					<div class="inner">
 						<header class="major">
