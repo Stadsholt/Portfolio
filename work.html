@@ -2,10 +2,21 @@
 <html>
 <head>
     <title>Landing - </title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
+    </noscript>
+    <style>
+        /* Forcing images to maintain aspect ratio without stretching */
+        .spotlights .image img {
+            width: 100%; /* Make sure it uses the full available width */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: contain; /* Prevents distortion */
+            max-height: 400px; /* You can adjust this to control height */
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -14,7 +25,7 @@
 
     <!-- Header -->
     <header id="header" class="alt style2">
-        <a class="logo" href="index.html"><strong>Sebastian Stadsholt</strong></a>
+        <a class="logo" href="index.html">Sebastian Stadsholt</a>
         <nav>
             <a href="#menu">Menu</a>
         </nav>
@@ -26,27 +37,21 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="work.html">Work Experience</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="elements.html">Elements</a></li>
-        </ul>
-        <ul class="actions stacked">
-            <li><a class="button primary fit" href="#">Get Started</a></li>
-            <li><a class="button fit" href="#">Log In</a></li>
         </ul>
     </nav>
 
     <!-- Banner -->
-    <!-- Note: The "styleN" class below should match that of the header element. -->
     <section id="banner" class="style2">
         <div class="inner">
-							<span class="image">
-								<img src="images/pic07.jpg" alt="" />
-							</span>
+        <span class="image">
+            <img alt="" src="images/Work1.jpg"/>
+        </span>
             <header class="major">
-                <h1>Landing</h1>
+                <h1>Work Experience</h1>
             </header>
             <div class="content">
-                <p>Lorem ipsum dolor sit amet nullam consequat<br />
-                    sed veroeros. tempus adipiscing nulla.</p>
+                <p>Discover my professional experience, including my role as an IT Consultant at Netcompany, where I
+                    work on data migration and system integration.</p>
             </div>
         </div>
     </section>
@@ -54,63 +59,64 @@
     <!-- Main -->
     <div id="main">
 
-        <!-- One -->
+        <!-- One: Career -->
         <section id="one">
             <div class="inner">
                 <header class="major">
-                    <h2>Sed amet aliquam</h2>
+                    <h2>Career</h2>
                 </header>
-                <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+                <p>
+                    I’m an IT professional with a strong background in system development, data migration, and
+                    user-centred design. My focus is on solving complex technical challenges while ensuring seamless
+                    integration and efficiency in large-scale projects. With expertise in frontend development, backend
+                    systems, and interactive design, I’m passionate about creating intuitive digital experiences. I
+                    continuously stay updated with emerging technologies, improving my skills and contributing to
+                    impactful projects that align with both business and user needs.
+                </p>
             </div>
         </section>
 
         <!-- Two -->
         <section id="two" class="spotlights">
             <section>
-                <a href="generic.html" class="image">
-                    <img src="images/pic08.jpg" alt="" data-position="center center" />
-                </a>
+                <div class="image">
+                    <img src="images/nc2.png" alt="Netcompany" data-position="center center"/>
+                </div>
                 <div class="content">
                     <div class="inner">
                         <header class="major">
-                            <h3>Orci maecenas</h3>
+                            <h3>Netcompany - IT Consultant</h3>
+                            <p><i>Sep. 2025 - Present</i></p>
                         </header>
-                        <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-                        <ul class="actions">
-                            <li><a href="generic.html" class="button">Learn more</a></li>
-                        </ul>
+                        <p>
+                            As an IT Consultant working on the data migration efforts within Project Horizon at
+                            Netcompany, I am responsible for migrating 700,000 pension policies for Forca, a key player
+                            in Denmark's pension sector. These policies represent approximately 20% of Denmark's entire
+                            pension system. My role involves ensuring the accurate and efficient transfer of these
+                            policies, collaborating with cross-functional teams to address technical challenges and
+                            ensure smooth system integration.   <!-- TODO: need like few skills on here.  -->
+                        </p>
                     </div>
                 </div>
             </section>
+
             <section>
-                <a href="generic.html" class="image">
-                    <img src="images/pic09.jpg" alt="" data-position="top center" />
-                </a>
-                <div class="content">
-                    <div class="inner">
-                        <header class="major">
-                            <h3>Rhoncus magna</h3>
-                        </header>
-                        <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-                        <ul class="actions">
-                            <li><a href="generic.html" class="button">Learn more</a></li>
-                        </ul>
-                    </div>
+                <div class="image">
+                    <img src="images/cass1.jpg" alt="3D Printing" data-position="center center"/>
                 </div>
-            </section>
-            <section>
-                <a href="generic.html" class="image">
-                    <img src="images/pic10.jpg" alt="" data-position="25% 25%" />
-                </a>
                 <div class="content">
                     <div class="inner">
                         <header class="major">
-                            <h3>Sed nunc ligula</h3>
+                            <h3>Student Assistant at Aalborg University</h3>
+                            <p><i>Feb. 2025 - Jun. 2025</i></p>
                         </header>
-                        <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-                        <ul class="actions">
-                            <li><a href="generic.html" class="button">Learn more</a></li>
-                        </ul>
+                        <p>
+                            While studying Interaction Design at Aalborg University, I worked as a Student Assistant in the
+                            3D Print Lab. My responsibilities included assisting students with troubleshooting 3D printing
+                            issues, performing machine maintenance, and providing support for various printing projects in
+                            the Department of Computer Science. This role helped me develop valuable technical skills, problem-solving
+                            abilities, and experience in a hands-on academic environment.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -120,11 +126,11 @@
         <section id="three">
             <div class="inner">
                 <header class="major">
-                    <h2>Massa libero</h2>
+                    <h2>Projects</h2>
                 </header>
-                <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
+                <p>See my projects and the systems I have worked on.</p>
                 <ul class="actions">
-                    <li><a href="generic.html" class="button next">Get Started</a></li>
+                    <li><a href="projects.html" class="button next">View Projects</a></li>
                 </ul>
             </div>
         </section>
@@ -135,11 +141,10 @@
     <footer id="footer">
         <div class="inner">
             <ul class="icons">
-                <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-                <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-                <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-                <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/stadsholt" class="icon brands alt fa-github" target="_blank"><span
+                        class="label">GitHub</span></a></li>
+                <li><a href="https://linkedin.com/in/stadsholt" class="icon brands alt fa-linkedin-in"
+                       target="_blank"><span class="label">LinkedIn</span></a></li>
             </ul>
             <ul class="copyright">
                 <li>&copy; Sebastian Stadsholt</li>

@@ -4,41 +4,206 @@
     <title>Projects - Sebastian Stadsholt</title>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
-    <link href="assets/css/main.css" rel="stylesheet"/>
     <noscript>
         <link href="assets/css/noscript.css" rel="stylesheet"/>
     </noscript>
 
     <!-- Add Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="assets/css/main.css" rel="stylesheet">
     <!-- Custom Styles -->
     <style>
-        #myCarousel {
-            width: 100%;
-            max-width: 800px;
-        }
 
-        .carousel-inner {
-            height: 500px;
-            overflow: hidden;
-        }
+        /* Prevent horizontal overflow and fix any content spilling out of the screen */
+  body, html {
+      overflow-x: hidden; /* Prevent horizontal overflow across the whole page */
+      width: 100%; /* Ensure the page takes up full width */
+  }
 
-        .carousel-inner img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
+  /* Ensure all images and content elements are contained within their parent containers */
+  .content img, .carousel-item img {
+      max-width: 100%; /* Make sure images are responsive and do not overflow */
+      height: auto; /* Maintain the aspect ratio of the images */
+      object-fit: contain; /* Prevent distortion of images */
+  }
 
-        #main, #banner, .content {
-            color: white !important;
-        }
+  /* Adjust video container to be responsive as well */
+  .video-container {
+      width: 100%;
+      max-width: 100%; /* Ensure video doesn't overflow */
+      margin: 0 auto; /* Center the video */
+      overflow: hidden; /* Hide any overflow */
+  }
 
-        #banner h1, .content h3 {
-            color: white !important;
-        }
+  /* For the carousel, make sure items do not exceed the container size */
+  #myCarousel {
+      width: 100%; /* Make the carousel container responsive */
+      height: 500px; /* Set a height for the carousel */
+      overflow: hidden; /* Prevent images from spilling out of the container */
+  }
+
+  /* Ensure content like text doesn't overflow */
+  .content p {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      white-space: normal;
+      padding: 0 20px;
+  }
+
+  /* For mobile screens, make sure there is no horizontal scroll and text remains inside the container */
+  @media (max-width: 768px) {
+      .content p {
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          white-space: normal;
+          padding: 15px; /* Adjust padding for smaller screens */
+      }
+
+      #myCarousel {
+          height: 300px; /* Adjust height of carousel for smaller screens */
+      }
+
+      /* Ensure no horizontal overflow on mobile */
+      body, html {
+          overflow-x: hidden; /* Disable horizontal scroll */
+      }
+  }
+
+          /* Ensure that no text element is causing overflow in smaller widths */
+          @media (max-width: 480px) {
+              body {
+                  overflow-x: hidden; /* Prevent horizontal overflow */
+              }
+
+              .content {
+                  word-wrap: break-word;
+                  overflow-wrap: break-word;
+              }
+          }
+                  #myCarousel {
+                      width: 100%;
+                      max-width: 800px;
+                  }
+
+                  .carousel-inner {
+                      height: 500px;
+                      overflow: hidden;
+                  }
+
+                  .carousel-inner img {
+                      width: 100%;
+                      height: 100%;
+                      object-fit: contain;
+                  }
+
+                  /* Menu Text White */
+                  #menu a, #menu .links a {
+                      color: white !important;
+                  }
+
+                  /* Footer - Keep original color */
+                  #footer {
+                      background-color: #242943 !important; /* Keeps footer original color */
+                  }
+
+                  #footer .copyright li {
+                      color: #fff !important; /* Ensures footer text stays white */
+                  }
+
+                  /* General Page White Text */
+                  body, #main, #banner, .content, #banner h1, .content h3 {
+                      color: white !important;
+                  }
+
+                  /* Project Titles White */
+                  #two h3, #three h2, #one h2 {
+                      color: white !important;
+                  }
+
+                  /* Banner Text White */
+                  #banner h1, #banner .content p {
+                      color: white !important;
+                  }
+
+                  /* Make sure menu text is white */
+                  #menu a {
+                      color: white !important;
+                  }
+
+                  /* Remove any blue highlighting on hover and active states */
+                  #menu a:hover, #menu a:active {
+                      color: white !important;
+                      background-color: transparent !important; /* Remove any background highlighting */
+                      text-decoration: none !important; /* Remove underline on hover */
+                  }
+
+                  /* Ensure links within .links are also white */
+                  #menu .links a {
+                      color: white !important;
+                  }
+             .video-container {
+                  width: 100%;
+                  max-width: 100%; /* Ensure it takes the full available width */
+                  margin: 0 auto; /* Centers the video */
+              }
+
+              .zoodex-video {
+                  width: 100%; /* Make the video responsive */
+                  max-width: 2000px; /* Add the max width limit */
+                  height: auto; /* Keeps the aspect ratio intact */
+              }
+                  /* Ensure the carousel takes up no more space than needed */
+          #myCarousel {
+              max-width: 100%;
+              height: auto;
+          }
+
+          /* For mobile devices */
+          @media (max-width: 768px) {
+              .carousel-inner {
+                  height: auto; /* Adjust height automatically */
+              }
+
+              .carousel-item {
+                  height: auto !important; /* Ensure each item takes only as much space as needed */
+              }
+          }
+
+          /* Optional: Remove extra padding/margin below carousel images */
+          .carousel-item img {
+              display: block;
+              width: 100%; /* Ensures image takes full width */
+              height: auto; /* Keeps the aspect ratio intact */
+              object-fit: cover; /* Ensures no empty space below images */
+          }
+                  /* Set a fixed height for the carousel to avoid page shifting */
+          #myCarousel {
+              max-width: 100%;
+              height: 500px; /* Set a consistent height for the carousel */
+          }
+
+          /* For mobile devices */
+          @media (max-width: 768px) {
+              #myCarousel {
+                  height: 300px; /* Adjust height for smaller screens */
+              }
+          }
+
+          /* Ensure images inside carousel scale properly */
+          .carousel-inner {
+              height: 100%;
+          }
+
+          .carousel-item img {
+              display: block;
+              width: 100%; /* Makes the image take full width */
+              height: 100%; /* Ensures image fills the height */
+              object-fit: cover; /* Makes the image cover the area without distorting */
+          }
+
     </style>
 </head>
+
 <body class="is-preload">
 
 <!-- Wrapper -->
@@ -46,7 +211,7 @@
 
     <!-- Header -->
     <header id="header" class="alt style2">
-        <a class="logo" href="index.html"><strong>Sebastian Stadsholt</strong></a>
+        <a class="logo" href="index.html">Sebastian Stadsholt</a>
         <nav>
             <a href="#menu">Menu</a>
         </nav>
@@ -58,11 +223,6 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="work.html">Work Experience</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="elements.html">Elements</a></li>
-        </ul>
-        <ul class="actions stacked">
-            <li><a class="button primary fit" href="#">Get Started</a></li>
-            <li><a class="button fit" href="#">Log In</a></li>
         </ul>
     </nav>
 
@@ -70,7 +230,7 @@
     <section class="style2" id="banner">
         <div class="inner">
 			<span class="image">
-				<img alt="" src="images/pic07.jpg"/>
+				<img alt="" src="images/banner3.jpg"/>
 			</span>
             <header class="major">
                 <h1>Projects</h1>
@@ -103,7 +263,6 @@
 
         <!-- Two: Projects -->
 
-
         <!-- Project 1: Moegaard -->
         <section class="spotlights" id="two">
             <section>
@@ -113,7 +272,10 @@
                             <h3>Master’s Thesis, Moesgaard Museum</h3>
                         </header>
                         <p>
-                            Designed and evaluated a hybrid interactive installation combining physical and touchscreen interaction. The prototype improved usability and engagement across all UES-SF dimensions, with 86.8% of visitors preferring the redesigned version. Findings were supported by observations and interaction logs, showing increased engagement and reduced errors.
+                            Designed and evaluated a hybrid interactive installation combining physical and touchscreen
+                            interaction. The prototype improved usability and engagement across all UES-SF dimensions,
+                            with 86.8% of visitors preferring the redesigned version. Findings were supported by
+                            observations and interaction logs, showing increased engagement and reduced errors.
                         </p>
                     </div>
                 </div>
@@ -148,7 +310,7 @@
                         </div>
                     </div>
 
-                    <!-- Carousel Controls -->
+                    <!-- Left and Right Controls -->
                     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
@@ -157,16 +319,17 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
+
                 </div>
 
             </section>
-            <!-- Video Section Below Carousel -->
-            <div class="video-container" style="text-align: center; margin-top: 50px; display: block;margin-bottom: 50px;">
-                <video width="50%" height="auto" controls>
-                    <source src="video/moesgaardVid1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+            <!--            &lt;!&ndash; Video Section Below Carousel &ndash;&gt;-->
+            <!--            <div class="video-container" style="text-align: center; margin-top: 50px; display: block;margin-bottom: 50px;">-->
+            <!--                <video width="50%" height="auto" controls>-->
+            <!--                    <source src="video/moesgaardVid1.mp4" type="video/mp4">-->
+            <!--                    Your browser does not support the video tag.-->
+            <!--                </video>-->
+            <!--            </div>-->
 
             <!-- Project 2: Zoodex -->
             <section>
@@ -182,11 +345,16 @@
                         </p>
                     </div>
                 </div>
-                <span class="image">
-        <video muted loop playsinline controls style="width:100%; height:100%; object-fit: cover;">
-            <source src="images/zoodex1.mp4" type="video/mp4">
-        </video>
-    </span>
+
+                <!-- Video Section for Zoodex -->
+                <div class="video-container"
+                     style="text-align: center; margin-top: 0px; margin-bottom: 0px; width: 100%; max-width: 1000px; margin-left: auto; margin-right: auto;">
+                    <video controls muted style="width: 100%; height: auto;">
+                        <source src="images/zoodex1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
             </section>
 
 
@@ -221,7 +389,7 @@
                 </header>
                 <p>See my professional experience and the systems I have worked on.</p>
                 <ul class="actions">
-                    <li><a href="landing.html" class="button next">View Work Experience</a></li>
+                    <li><a href="work.html" class="button next">View Work Experience</a></li>
                 </ul>
             </div>
         </section>
@@ -232,11 +400,10 @@
     <footer id="footer">
         <div class="inner">
             <ul class="icons">
-                <li><a class="icon brands alt fa-twitter" href="#"><span class="label">Twitter</span></a></li>
-                <li><a class="icon brands alt fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
-                <li><a class="icon brands alt fa-instagram" href="#"><span class="label">Instagram</span></a></li>
-                <li><a class="icon brands alt fa-github" href="#"><span class="label">GitHub</span></a></li>
-                <li><a class="icon brands alt fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/stadsholt" class="icon brands alt fa-github" target="_blank"><span
+                        class="label">GitHub</span></a></li>
+                <li><a href="https://linkedin.com/in/stadsholt" class="icon brands alt fa-linkedin-in"
+                       target="_blank"><span class="label">LinkedIn</span></a></li>
             </ul>
             <ul class="copyright">
                 <li>&copy; Sebastian Stadsholt</li>
@@ -247,9 +414,6 @@
 </div>
 
 <!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -257,6 +421,11 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+
+<!-- Bootstrap Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" defer></script>
 
 </body>
 </html>

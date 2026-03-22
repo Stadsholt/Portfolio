@@ -25,6 +25,31 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+
+/* Targeting the menu links */
+#menu a {
+    color: white !important; /* Force the color to be white */
+}
+
+/* Remove any Bootstrap blue highlight/underline on hover or focus */
+#menu a:hover,
+#menu a:focus,
+#menu a:active {
+    color: white !important; /* Ensures hover states are white */
+    background-color: transparent !important; /* Remove background highlight */
+    text-decoration: none !important; /* Remove underline */
+}
+
+/* Ensure the links are white when they're active */
+#menu .links li a {
+    color: white !important;
+}
+
+/* Prevent link from inheriting styles */
+#menu a:focus {
+    color: white !important;
+}
+
 body {
 	line-height: 1;
 }
