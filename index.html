@@ -8,10 +8,11 @@
 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	<style>
 		#banner .banner-layout {
+            margin-left: 2.5rem;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 3rem;
+            justify-content: flex-start;
+            gap: 1.75rem;
             flex-wrap: wrap;
         }
 
@@ -20,40 +21,121 @@
             flex-direction: column;
             align-items: flex-start;
             text-align: left;
-            flex: 1 1 500px;
+            flex: 0 1 42rem;
+        }
+
+        #banner .banner-copy .major {
+            margin-bottom: 0.2rem !important;
+        }
+
+        #banner .banner-copy h1 {
+            margin: 0 !important;
+            line-height: 1.1;
+        }
+
+        #banner .banner-copy .major > :first-child:after {
+            margin: 0.15em 0 0.15em 0 !important;
         }
 
         #banner .banner-copy p {
-            margin: 0;
+            margin: 0 !important;
             max-width: 38rem;
             font-size: 1rem;
             letter-spacing: normal;
             text-transform: none;
         }
 
-        #banner .banner-profile {
-            flex: 0 1 300px;
-        }
+       #banner .banner-profile {
+    flex: 0 0 360px;
+    margin-left: 4rem;
+}
 
-        #banner .banner-profile img {
-            display: block;
-            width: 300px;
-            max-width: 100%;
-            height: auto;
-            border-radius: 8%;
-        }
+#banner .banner-profile img {
+    display: block;
+    width: 360px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8%;
+}
 
         @media (max-width: 768px) {
             #banner .banner-layout {
+                margin-left: 0;
+                width: 100%;
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
+                justify-content: center;
+                gap: 1.25rem;
             }
 
             #banner .banner-copy {
                 flex: 1 1 auto;
+                width: 100%;
+                align-items: center;
+                text-align: center;
+            }
+
+            #banner .banner-copy .major {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #banner .banner-copy p {
+                text-align: center;
+            }
+
+            #banner .banner-profile {
+                flex: 0 1 auto;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-left: 0;
+            }
+
+            #banner .banner-profile img {
+                width: 300px;
             }
         }
+		@media screen and (max-width: 1280px) {
+    #banner {
+        background-attachment: scroll;
+    }
+
+    #banner .banner-layout {
+        margin-left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.25rem;
+    }
+
+    #banner .banner-copy {
+        flex: 1 1 auto;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    #banner .banner-copy .major {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #banner .banner-copy p {
+        text-align: center;
+    }
+
+    #banner .banner-profile {
+        flex: 0 1 auto;
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+}
 	</style>
+
 </head>
 <body class="is-preload">
 
