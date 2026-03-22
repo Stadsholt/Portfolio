@@ -1,172 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+		/* Banner Section */
+        #banner {
+            background-image: url("../../images/banner.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 60vh; /* Adjust banner height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
 
-/* Banner */
+        #banner .inner {
+            display: flex;
+            flex-direction: row; /* Default layout: title + text left, image right */
+            justify-content: center;
+            align-items: flex-start;
+            gap: 2rem;
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+            z-index: 2;
+        }
 
-	#banner {
-		@include vendor('align-items', 'center');
-		@include vendor('background-image', 'url("../../images/banner.png")');
-		@include vendor('display', 'flex');
-		@include padding(4em, 0, (2em, 0, 0, 0));
-		background-attachment: fixed;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		border-bottom: 0 !important;
-		cursor: default;
-		height: 60vh;
-		margin-bottom: -3.25em;
-		max-height: 32em;
-		min-height: 22em;
-		position: relative;
-		top: -3.25em;
+        /* Content (Text) Section */
+        #banner .inner .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column; /* Stack title and text vertically */
+            align-items: center;
+        }
 
-		&:after {
-			@include vendor('transition', 'opacity #{_duration(banner)} ease');
-			@include vendor('transition-delay', '0.75s');
-			@include vendor('pointer-events', 'none');
-			background-color: _palette(bg);
-			content: '';
-			display: block;
-			height: 100%;
-			left: 0;
-			opacity: 0.85;
-			position: absolute;
-			top: 0;
-			width: 100%;
-			z-index: 1;
-		}
+        /* Image Section */
+        #banner .inner .image {
+            flex: 0 1 300px; /* Fixed width but can shrink */
+            max-width: 100%;
+            margin-top: 20px; /* Adds space between text and image */
+        }
 
-		h1 {
-			font-size: 3.25em;
-		}
+        /* Mobile Layout */
+        @media (max-width: 768px) {
+            #banner .inner {
+                flex-direction: column; /* Stack text and image vertically on small screens */
+                align-items: center;
+            }
 
-		> .inner {
-			@include vendor('transition', (
-				'opacity 1.5s ease',
-				'transform 0.5s ease-out',
-				'filter 0.5s ease',
-				'-webkit-filter 0.5s ease'
-			));
-			padding: 0 !important;
-			position: relative;
-			z-index: 2;
+            #banner .inner .image {
+                margin-top: 1.5rem; /* Adds space when image is stacked below */
+            }
+        }
+	</style>
+</head>
+<body class="is-preload">
 
-			.image {
-				display: none;
-			}
+<!-- Wrapper -->
+<div id="wrapper">
 
-			header {
-				width: auto;
+	<!-- Header -->
+	<header id="header" class="alt style2">
+		<a class="logo" href="index.html">Sebastian Stadsholt</a>
+		<nav>
+			<a href="#menu">Menu</a>
+		</nav>
+	</header>
 
-				> :first-child {
-					width: auto;
+	<!-- Menu -->
+	<nav id="menu">
+		<ul class="links">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="work.html">Work Experience</a></li>
+			<li><a href="projects.html">Projects</a></li>
+		</ul>
+	</nav>
 
-					&:after {
-						max-width: 100%;
-					}
-				}
-			}
+	<!-- Banner -->
+	<section id="banner" class="major">
+		<div class="inner">
+			<!-- TEXT -->
+			<div class="content">
+				<header class="major">
+					<h1>Sebastian Stadsholt</h1>
+				</header>
+				<p>
+					IT Consultant with expertise in full-stack development, data migration, and user experience (UX) design.<br />
+					Background in Interaction Design, with hands-on experience in C#, Java, cloud technologies, and interactive solutions.
+				</p>
+			</div>
 
-			.content {
-				@include vendor('display', 'flex');
-				@include vendor('align-items', 'center');
-				margin: 0 0 _size(element-margin) 0;
+			<!-- IMAGE -->
+			<div class="image">
+				<img src="images/ProfileBlue3.png" alt="Sebastian" />
+			</div>
 
-				> * {
-					margin-right: 1.5em;
-					margin-bottom: 0;
-				}
+		</div>
+	</section>
 
-				> :last-child {
-					margin-right: 0;
-				}
+	<!-- Main -->
+	<div id="main">
 
-				p {
-					font-size: 0.7em;
-					font-weight: _font(weight-bold);
-					letter-spacing: _font(letter-spacing-alt);
-					text-transform: uppercase;
-				}
-			}
-		}
+		<!-- One -->
+		<section id="one" class="tiles">
+			<article>
+				<span class="image">
+					<img src="images/Work1.jpg" alt="" />
+				</span>
+				<header class="major">
+					<h3><a href="work.html" class="link">Work Experience</a></h3>
+					<p>Explore my professional experience.</p>
+				</header>
+			</article>
+			<article>
+				<span class="image">
+					<img src="images/moesgaard2.jpg" alt="" />
+				</span>
+				<header class="major">
+					<h3><a href="projects.html" class="link">Projects</a></h3>
+					<p>Explore my selected projects.</p>
+				</header>
+			</article>
+		</section>
 
-		&.major {
-			height: 75vh;
-			min-height: 30em;
-			max-height: 50em;
+	</div>
 
-			&.alt {
-				opacity: 0.75;
-			}
-		}
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="icons">
+				<li><a href="https://github.com/stadsholt" class="icon brands alt fa-github" target="_blank"><span
+						class="label">GitHub</span></a></li>
+				<li><a href="https://linkedin.com/in/stadsholt" class="icon brands alt fa-linkedin-in"
+					   target="_blank"><span class="label">LinkedIn</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Sebastian Stadsholt</li>
+			</ul>
+		</div>
+	</footer>
 
-		&.style1 { &:after { background-color: _palette(accent1); } }
-		&.style2 { &:after { background-color: _palette(accent2); } }
-		&.style3 { &:after { background-color: _palette(accent3); } }
-		&.style4 { &:after { background-color: _palette(accent4); } }
-		&.style5 { &:after { background-color: _palette(accent5); } }
-		&.style6 { &:after { background-color: _palette(accent6); } }
+</div>
 
-		body.is-preload & {
-			&:after {
-				opacity: 1.0;
-			}
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
 
-			> .inner {
-				@include vendor('filter', 'blur(0.125em)');
-				@include vendor('transform', 'translateX(-0.5em)');
-				opacity: 0;
-			}
-		}
-
-		@include breakpoint('<=large') {
-			background-attachment: scroll;
-		}
-
-		@include breakpoint('<=small') {
-			@include padding(3em, 0, (2em, 0, 0, 0));
-			height: auto;
-			margin-bottom: -2.75em;
-			max-height: none;
-			min-height: 0;
-			top: -2.75em;
-
-			h1 {
-				font-size: 2em;
-			}
-
-			> .inner {
-				.content {
-					display: block;
-
-					> * {
-						margin-right: 0;
-						margin-bottom: _size(element-margin);
-					}
-				}
-			}
-
-			&.major {
-				height: auto;
-				min-height: 0;
-				max-height: none;
-			}
-		}
-
-		@include breakpoint('<=xsmall') {
-			@include padding(4em, 0, (2em, 0, 0, 0));
-
-			> .inner {
-				.content {
-					p {
-						br {
-							display: none;
-						}
-					}
-				}
-			}
-
-			&.major {
-				@include padding(6em, 0, (2em, 0, 0, 0));
-			}
-		}
-	}
+</body>
+</html>
