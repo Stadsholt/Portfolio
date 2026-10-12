@@ -150,6 +150,18 @@
         #footer .copyright li {
     color: #ffffff;
 }
+        /* Three home tiles in a single row on wide screens (falls back to 2, then 1) */
+        #one.tiles article {
+            width: 33.3333%;
+        }
+        /* Tile tint, lighter than main.css (0.85) so the background photos read */
+        #one.tiles article:before {
+            opacity: 0.7;
+        }
+        /* Keep the template's hover reveal: hover clears the tint entirely */
+        #one.tiles article:hover:before {
+            opacity: 0;
+        }
     </style>
 
 </head>
@@ -171,6 +183,7 @@
         <ul class="links">
             <li><a href="index.html">Home</a></li>
             <li><a href="work.html">Work Experience</a></li>
+            <li><a href="publications.html">Publications</a></li>
             <li><a href="projects.html">Projects</a></li>
         </ul>
     </nav>
@@ -210,6 +223,15 @@
                 <header class="major">
                     <h3><a class="link" href="work.html">Work Experience</a></h3>
                     <p>Explore my professional experience.</p>
+                </header>
+            </article>
+            <article>
+						<span class="image">
+							<img alt="" src="images/mobilehciTile.jpg"/>
+						</span>
+                <header class="major">
+                    <h3><a class="link" href="publications.html">Publications</a></h3>
+                    <p>Explore my published research.</p>
                 </header>
             </article>
             <article>
